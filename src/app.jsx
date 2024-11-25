@@ -11,11 +11,6 @@ const dvaApp = dva.createApp({
 const store = dvaApp.getStore();
 console.log(store);
 const App = (props) => {
-    return (
-        <Provider store={store}>
-            {props.children}
-            <span>152152</span>
-        </Provider>
-    );
+    return <Provider store={store}>{props.children}</Provider>;
 };
 export default App;

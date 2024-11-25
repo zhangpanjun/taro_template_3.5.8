@@ -14,3 +14,23 @@ yarn
 
 yarn dev:weapp 运行小程序
 tran dev:h5 运行 h5
+
+# 开启 css modules 模式
+
+config/index.js 文件
+`cssModules: {
+    enable: true, // 开启 css modules 功能
+    config: {
+    namingPattern: 'module', // 只有文件中包含.module.样式文件会进行 css modules 转义
+    generateScopedName: '[name]**[local]\_**[hash:base64:5]' // 转义时的类名命名规则
+    }
+}`
+app.scss 中盛放全局样式
+app.jsx 中引入全局样式文件
+具体页面文件*.module.scss 文件盛放模块样式；
+对应*.jsx 文件引入并使用；
+`
+import styles from './\*.module.scss';
+
+<div className={styles.btn}></div>
+`

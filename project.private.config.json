@@ -3,5 +3,25 @@
   "projectname": "taro_template_3.5.9",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "sub2分包2",
+          "pathName": "subPackages/sub2/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "sub1分包1",
+          "pathName": "subPackages/sub1/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
