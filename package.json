@@ -56,6 +56,7 @@
     "@tarojs/shared": "3.5.9",
     "@tarojs/taro": "3.5.9",
     "@tarojs/taro-h5": "3.5.9",
+    "classnames": "^2.5.1",
     "dva-core": "^2.0.4",
     "dva-loading": "^3.0.25",
     "react": "^18.0.0",
