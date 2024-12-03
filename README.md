@@ -1,6 +1,6 @@
 # 项目简介
 
-taro3.5.9 脚手架版本+dva 数据管理+nutui 京东风格 ui 库+react 构建的 taro 跨端项目 template，开箱即用
+taro3.5.8 脚手架版本+dva 数据管理+nutui 京东风格 ui 库+react 构建的 taro 跨端项目 template，开箱即用
 
 # 环境
 

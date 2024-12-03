@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "taro_template_3.5.9",
-  "description": "a template of taro by version 3.5.9",
+  "projectname": "taro_template_3.5.8",
+  "description": "a template of taro by version 3.5.8",
   "appid": "wx0f46d9575f01e20f",
   "setting": {
     "urlCheck": true,

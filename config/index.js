@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'taro_template_3.5.9',
+  projectName: 'taro_template_3.5.8',
   date: '2024-11-22',
   designWidth: 375,
   deviceRatio: {
