@@ -1,4 +1,6 @@
 
+
+
 export default ({
   pages: [
     'pages/index/index',
@@ -44,8 +46,9 @@ export default ({
         ]
     },
   ],
-//   这里盛放项目公共使用的组件，在使用的页面直接引用标签即可;但这里的组件，暂时还接收不了参数。待确定原因。如需全局使用一些组件请使用react的context相关用法
-//   usingComponents:{}
+//   这里盛放项目中小程序环境下的公共使用的组件,被引用的页面中无需再次引入，直接使用标签即可(这里的标签不要用大驼峰形式，会和react的自定义组件冲突！)；为了防止非小程序环境报错，切记要判断环境后再使用！
+// 如需全局使用一些react组件，请使用react的context相关用法；
+  usingComponents:{demo:'./components/wxComponents/demo/index'}
 // 如果小程序需要调用地理位置api需要先在这里开启
 //   permission:{
 //     'scope.userLocation':{
