@@ -38,3 +38,16 @@ import styles from './\*.module.scss';
 # 微信小程序专属的公共组件放在 components/wxComponents 中，并在 app.config.js 的 useComponents 中注册
 
 # 使用 dva 进行状态管理
+
+1：安装以下依赖包
+dva-core dva-loading redux react-redux @tarojs/redux @tarojs/redux-h5 redux-thunk redux-logger
+
+2：dva.js 中暴露出 dva 实例函数; 函数中创建 dva 实例，注册传入进来的 model，准备获取 store 函数
+
+3：app.jsx 项目入口文件中引入 dva，并创建 dva 实例，调用获取 store 函数，Provider 组件包裹所有子组件；将 store 数据传入 Provider 组件，实现全局使用 store;
+
+4：models/具体模块 store.js 定义并暴露模块中状态及状态值同步异步处理函数（详细可参考 models/home.js）
+
+5：将所有 models 的 model 汇总到 index.js 中统一入口,并在 app.jsx 入口文件中注入；
+
+6：需要使用 store 数据的组件，通过 connect 写法生成高阶组件，在此写法中可获取想要的 model,再通过 dispatch 方式更新状态值。（详细可参考 pages/index/index.jsx）
