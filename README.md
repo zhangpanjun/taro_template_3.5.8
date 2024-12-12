@@ -38,7 +38,6 @@ yarn dev:h5 运行 h5
 
 `
 import styles from './\*.module.scss';
-
 <div className={styles.btn}></div>
 `
 
