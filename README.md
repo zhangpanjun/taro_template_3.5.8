@@ -19,6 +19,7 @@ yarn dev:h5 运行 h5
 # 开启 css modules 模式
 
 1: config/index.js 文件
+
 `cssModules: {
     enable: true, // 开启 css modules 功能
     config: {
@@ -28,9 +29,13 @@ yarn dev:h5 运行 h5
 }`
 
 2: app.scss 中盛放全局样式
+
 3: app.jsx 中引入全局样式文件
-4: 具体页面文件*.module.scss 文件盛放模块样式；
-5: 对应*.jsx 文件引入并使用；
+
+4: 具体页面文件\*.module.scss 文件盛放模块样式；
+
+5: 对应\*.jsx 文件引入并使用；
+
 `
 import styles from './\*.module.scss';
 
