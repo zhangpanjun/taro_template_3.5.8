@@ -28,7 +28,12 @@ const Index = (props) => {
         <div>
             <div>taro3.5.8 + nutui京东风格ui+dva状态管理+css-modules构建的跨端项目模板</div>
             <br />
-            <div>此taro版本可使用html中的大部分原生标签啦~</div>
+            <div>此taro版本可使用html中的大部分原生标签啦~ </div>
+            <div>但是这里的原生标签在浏览器和微信小程序下渲染的样式不一样哟~具体差异可查看</div>
+            <a href="https://taro.redwoodjs.cn/docs/use-h5" className={styles.aDom}>
+                差异
+            </a>
+
             <br />
             <div>{`home-model中status这个字段状态的最新值是${status}`}</div>
             <Button type="primary" className={styles.btn}>

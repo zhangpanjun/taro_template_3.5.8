@@ -38,6 +38,7 @@ yarn dev:h5 运行 h5
 
 `
 import styles from './\*.module.scss';
+
 <div className={styles.btn}></div>
 `
 
@@ -61,3 +62,9 @@ dva-core dva-loading redux react-redux @tarojs/redux @tarojs/redux-h5 redux-thun
 5：将所有 models 的 model 汇总到 index.js 中统一入口,并在 app.jsx 入口文件中注入；
 
 6：需要使用 store 数据的组件，通过 connect 写法生成高阶组件，在此写法中可获取想要的 model,再通过 dispatch 方式更新状态值。（详细可参考 pages/index/index.jsx）
+
+# request 封装 （todo）
+
+# 路径 alias 配置（todo）
+
+# 关于原生标签的使用方法，及相关注意点 （todo）
