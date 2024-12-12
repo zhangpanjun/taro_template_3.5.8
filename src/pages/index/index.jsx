@@ -7,14 +7,47 @@ import styles from './index.module.scss';
 
 const Index = (props) => {
     const { home } = props;
-    console.log('store数据', home);
+    const { status } = home;
+    const changeHomeModelStatus = () => {
+        props.dispatch({
+            type: 'home/changeStatus',
+            payload: true,
+        });
+    };
+    const changeHomeModelStatusAsync = () => {
+        props
+            .dispatch({
+                type: 'home/asyncChangeStatus',
+                payload: false,
+            })
+            .then((res) => {
+                console.log(res, '异步都处理成功后要执行的逻辑放在这里');
+            });
+    };
     return (
         <div>
+            <div>taro3.5.8 + nutui京东风格ui+dva状态管理+css-modules构建的跨端项目模板</div>
+            <br />
+            <div>此taro版本可使用html中的大部分原生标签啦~</div>
+            <br />
+            <div>{`home-model中status这个字段状态的最新值是${status}`}</div>
             <Button type="primary" className={styles.btn}>
-                NutUI React Button
+                局部btn样式
             </Button>
             <Button className="btn">全局btn2</Button>
-            {process.env.TARO_ENV === 'weapp' && <demo showPrivacy />}
+            <br />
+            <Button className="btn" onClick={changeHomeModelStatus}>
+                同步更改home model中status的值
+            </Button>
+            <Button className="btn" onClick={changeHomeModelStatusAsync}>
+                异步更改home model中status的值
+            </Button>
+            <br />
+            {process.env.TARO_ENV === 'weapp' ? (
+                <demo showPrivacy />
+            ) : (
+                <div>h5环境不显示微信小程序专用的通过usingComponents注册的全局组件</div>
+            )}
         </div>
     );
 };

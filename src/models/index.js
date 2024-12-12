@@ -1,3 +1,5 @@
 
 import home from './home'
-export default [home]
+import otherModel from './otherModel'
+
+export default [home,otherModel]
