@@ -35,7 +35,11 @@ import styles from './\*.module.scss';
 <div className={styles.btn}></div>
 `
 
-# 微信小程序专属的公共组件放在 components/wxComponents 中，并在 app.config.js 的 useComponents 中注册
+# 公共组件（微信小程序专用公共组件，项目 react 写法公共组件）
+
+1：微信小程序专属的公共组件放在 components/wxComponents 中，并在 app.config.js 的 useComponents 中注册:
+
+2：react 写法公共组件需要使用 react 的 context 来实现，待完善
 
 # 使用 dva 进行状态管理
 
