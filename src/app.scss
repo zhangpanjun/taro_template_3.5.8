@@ -1,5 +1,6 @@
-// 这里盛放全局使用的样式，在app.js中引用后即可全局使用；
-// import '@tarojs/taro/html5.css';
+// 这里盛放全局使用的样式，在app.js中引用后即可全局使用；(在app.js中直接import '@tarojs/taro/html5.css'; h5环境下编译会报错，放在此文件中引用)
+// 当然也可以只摘取 @tarojs/taro/html5.css 中的一部分内容，自定义一个文件引入减少文件体积（详细见官网 https://taro.redwoodjs.cn/docs/use-h5 ）
+@import '@tarojs/taro/html5.css';
 
 .btn{
     width:auto;

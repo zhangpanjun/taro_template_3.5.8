@@ -1,6 +1,5 @@
 import { Provider } from 'react-redux';
-
-import models from './models';
+import models from '@/models';
 import dva from './dva';
 import './app.scss';
 

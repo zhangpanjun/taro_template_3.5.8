@@ -65,6 +65,22 @@ dva-core dva-loading redux react-redux @tarojs/redux @tarojs/redux-h5 redux-thun
 
 # request 封装 （todo）
 
-# 路径 alias 配置（todo）
+# 路径 alias 配置
 
-# 关于原生标签的使用方法，及相关注意点 （todo）
+1：config/index.js 中定义 alias 对象（详细参考该文档）
+
+2：需要被消费的文件中使用 alias 来引入文件 （如: @/api =>src/api）
+
+3：增加 jsconfig.json 文件，配置 paths，让编辑器认得别名不报错，并继续使用自动路径补全和资源溯源功能；
+
+# 关于原生标签的使用方法，及相关注意点
+
+1：在 app.scss 中引入原生标签的样式文件 @import '@tarojs/taro/html5.css';（也可部分引入，详见 https://taro.redwoodjs.cn/docs/use-h5）
+
+2：在 app.jsx 中引入上面文件会报错（具体原因暂未定位到，请按步骤一引入）
+
+3：引入的样式文件只有在非 h5 环境下才会展示 .h5-标签名 这样形式的类名。h5 环境下无效
+
+4：在非 h5 环境下，代码中的原生标签和对应环境下的标签 以及事件，属性 等转换关系，请参考官网（https://taro.redwoodjs.cn/docs/use-h5）；
+
+5：并不是所有原生标签都可在非 h5 环境下转换！！ 转换后的样式特征在不同环境下不一定都相同！！

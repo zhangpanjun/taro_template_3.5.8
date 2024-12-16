@@ -1,4 +1,15 @@
-const config = {
+// eslint-disable-next-line import/no-commonjs
+const path = require('path')
+
+const alias = {
+    '@/': path.resolve(__dirname, '..', 'src/'),
+    '@/api': path.resolve(__dirname, '..', 'src/api'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/models': path.resolve(__dirname, '..', 'src/models'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+  }
+  const config = {
   projectName: 'taro_template_3.5.8',
   date: '2024-11-22',
   designWidth: 375,
@@ -11,8 +22,10 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: ['@tarojs/plugin-html'],
+    //   全局使用的变量
   defineConstants: {
   },
+  alias,
   copy: {
     patterns: [
     ],
