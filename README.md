@@ -104,3 +104,5 @@ taro3 支持 react 的所有生命周期，但与真的 react 自身生命周期
       .exec(res => console.log(res))`
 
 2：注意此 api 调用所在的生命周期，小程序环境下 需 onReady 中获取 （可在 pages/index 中看到对应 demo）
+
+3：常见的获取 dom 获取不到问题，可参考（https://taro.redwoodjs.cn/docs/react-overall 常见问题；或者去 taro 问题社区看看）

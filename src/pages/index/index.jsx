@@ -2,7 +2,7 @@
 import React, { useEffect, createRef } from 'react';
 import { connect } from 'react-redux';
 import { Button } from '@nutui/nutui-react-taro';
-import Taro from '@tarojs/taro';
+import Taro, { useReady } from '@tarojs/taro';
 // import Demo from '../../components/Demo/Index';
 import styles from './index.module.scss';
 
@@ -26,6 +26,13 @@ const Index = (props) => {
                 console.log(res, '异步都处理成功后要执行的逻辑放在这里');
             });
     };
+    useReady(() => {
+        console.log('小程序页面挂载完毕');
+        Taro.createSelectorQuery()
+            .select('#only')
+            .boundingClientRect()
+            .exec((res) => console.log('小程序环境专用taro钩子哟~', res));
+    });
     useEffect(() => {
         // 利用ref来获取某个元素的style信息，在不同性质标签（原生/微信小程序）及不同环境下信息不相同，甚至获取不到！
         // buttonEl 指向原生标签，浏览器环境下，buttonEl?.current?.offsetWidth 能获取到元素宽度；但小程序下就会报错！
