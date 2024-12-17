@@ -84,3 +84,23 @@ dva-core dva-loading redux react-redux @tarojs/redux @tarojs/redux-h5 redux-thun
 4：在非 h5 环境下，代码中的原生标签和对应环境下的标签 以及事件，属性 等转换关系，请参考官网（https://taro.redwoodjs.cn/docs/use-h5）；
 
 5：并不是所有原生标签都可在非 h5 环境下转换！！ 转换后的样式特征在不同环境下不一定都相同！！
+
+# 获取元素的 style 相关属性
+
+    背景
+
+为了拉齐浏览器与小程序的不同环境的差异，taro 实现了自己的一套遵从 web 标准的相关 dom 和 bom 的 api；
+taro3 支持 react 的所有生命周期，但与真的 react 自身生命周期的效果还是有一些偏差。
+
+在 react 当中虚拟 dom 根据逻辑组成完毕后更新到页面变成真实 dom;而在 taro 当中，react 的虚拟 dom 还需要转化成 taro 的虚拟 dom,所以在 react 的 componentDidMount 钩子中 dom 已真实替换，但在 taro 的 componentDidMount 中并没有；只有在 onReady 中才是真正被替换显示的元素。
+
+另外，在浏览器和小程序下获取 dom 的方式也完全不同，不建议不同环境一种写法，建议使用 taro 给出的对应 api；
+
+    方案
+
+1：使用 taro 给的 api 来获取元素 style
+`Taro.createSelectorQuery().select('#only')
+      .boundingClientRect()
+      .exec(res => console.log(res))`
+
+2：注意此 api 调用所在的生命周期，小程序环境下 需 onReady 中获取 （可在 pages/index 中看到对应 demo）
