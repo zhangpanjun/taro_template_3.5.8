@@ -106,3 +106,19 @@ taro3 支持 react 的所有生命周期，但与真的 react 自身生命周期
 2：注意此 api 调用所在的生命周期，小程序环境下 需 onReady 中获取 （可在 pages/index 中看到对应 demo）
 
 3：常见的获取 dom 获取不到问题，可参考（https://taro.redwoodjs.cn/docs/react-overall 常见问题；或者去 taro 问题社区看看）
+
+# dev-tools 插件安装配置和使用
+
+1： yarn add --dev @tarojs/plugin-react-devtools
+
+2：config/dev.js 文件配置
+config = {
+plugins: [
+'@tarojs/plugin-react-devtools'
+],
+// ...
+}
+
+3：启动项目后即可看到需要向页面插入启动服务 js 文件地址。在 html 中插入即可
+
+4：插入后即可在之后打开项目后自动打开一个 tools 界面
