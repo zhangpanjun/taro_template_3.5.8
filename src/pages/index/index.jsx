@@ -26,6 +26,11 @@ const Index = (props) => {
                 console.log(res, '异步都处理成功后要执行的逻辑放在这里');
             });
     };
+    const toSubPage1 = () => {
+        Taro.navigateTo({
+            url: '/subPackages/sub1/index/index?a=1&b=2',
+        });
+    };
     useReady(() => {
         console.log('小程序页面挂载完毕');
         Taro.createSelectorQuery()
@@ -73,6 +78,9 @@ const Index = (props) => {
             ) : (
                 <div>h5环境不显示微信小程序专用的通过usingComponents注册的全局组件</div>
             )}
+            <Button className="btn" onClick={toSubPage1}>
+                跳转到sub-page1
+            </Button>
         </div>
     );
 };
