@@ -122,3 +122,11 @@ plugins: [
 3：启动项目后即可看到需要向页面插入启动服务 js 文件地址。在 html 中插入即可
 
 4：插入后即可在之后打开项目后自动打开一个 tools 界面
+
+# 多端同步调试
+
+1：config/index.js 中配置 outputRoot: `dist/${process.env.TARO_ENV}`,
+
+2：project.config.json 文件配置 "miniprogramRoot": "dist/weapp/",
+
+3：开启后 dist 目录下就会生成和 process.env.TARO_ENV 值相同的文件夹，运行多个环境命令，编译成不同环境代码，同时打开网页和小程序可进行预览调试。

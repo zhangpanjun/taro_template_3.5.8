@@ -1,5 +1,5 @@
 {
-  "miniprogramRoot": "dist/",
+  "miniprogramRoot": "dist/weapp/",
   "projectname": "taro_template_3.5.8",
   "description": "a template of taro by version 3.5.8",
   "appid": "wx0f46d9575f01e20f",
