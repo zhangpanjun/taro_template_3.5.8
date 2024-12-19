@@ -1,0 +1,6 @@
+// 非覆盖nutui自己定义的全局主题变量。
+// 在需要使用的地方  属性名:var(变量名) 即可
+:root,
+page {
+    --mycustomui-primary-color: yellow;
+}

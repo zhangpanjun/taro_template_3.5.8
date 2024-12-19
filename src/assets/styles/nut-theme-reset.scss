@@ -1,0 +1,10 @@
+// 这里自定义项目主题风格，变量名称和nutui中的对应变量名保持一致，即可覆盖京东默认主题。
+// nutui的主题通用scss文件变量在 依赖包 @nutui/nutui-react-taro/dist/styles/theme-default.scss 中，具体要覆盖的变量请参考此文件；
+// 如有更细节的样式覆盖，请参考上述依赖包中styles下的对应文件。
+// 这里通过 css Vars（ https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties） 的方式进行样式变量覆盖
+:root,
+page {
+    --nutui-brand-color: #396acc;
+    --nutui-brand-color-start: #396acc;
+    --nutui-brand-color-end: #396acc;
+}

@@ -130,3 +130,14 @@ plugins: [
 2：project.config.json 文件配置 "miniprogramRoot": "dist/weapp/",
 
 3：开启后 dist 目录下就会生成和 process.env.TARO_ENV 值相同的文件夹，运行多个环境命令，编译成不同环境代码，同时打开网页和小程序可进行预览调试。
+
+# 主题自定义及全局变量注入使用
+
+1：项目 src/assets/styles/定义自己的 scss 文件，文件中盛放覆盖 nutui 或者自定义的主题变量
+
+2：在 config/index.js 的 sass 中配置 resource:[‘1 中自定义的 scss 文件’]
+
+3：sass 中配置的 data 是引入的 nutui 相关的主题样式，需要通过 2 步骤 进行覆盖
+
+4：在需要使用的地方 属性名:var(变量名) 即可；具体 demo 可参考 pages/index/index.module.scss 中的
+.myCustomColor 类名中的使用

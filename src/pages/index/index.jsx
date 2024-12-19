@@ -64,9 +64,11 @@ const Index = (props) => {
             <Button type="primary" className={styles.btn} id="only">
                 局部btn样式
             </Button>
-            <Button className="btn">全局btn2</Button>
+            <Button className="btn" type="primary">
+                全局btn2
+            </Button>
             <br />
-            <Button className="btn" onClick={changeHomeModelStatus}>
+            <Button className={styles.myCustomColor} onClick={changeHomeModelStatus}>
                 同步更改home model中status的值
             </Button>
             <Button className="btn" onClick={changeHomeModelStatusAsync}>
