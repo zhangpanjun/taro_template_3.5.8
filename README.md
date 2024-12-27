@@ -63,7 +63,17 @@ dva-core dva-loading redux react-redux @tarojs/redux @tarojs/redux-h5 redux-thun
 
 6：需要使用 store 数据的组件，通过 connect 写法生成高阶组件，在此写法中可获取想要的 model,再通过 dispatch 方式更新状态值。（详细可参考 pages/index/index.jsx）
 
-# request 封装 （todo）
+# request 封装
+
+1: utils/request.js 文件进行 request 封装
+
+2：config/index.js 中配置 defineConstants 的 BASE_URL 全局使用
+
+3：.eslintrc 中增加全局变量识别配置
+
+4：config/dev.js 中增加了 h5 的 proxy 配置 demo 可择情况配置
+
+5：api/home.js 文件增加调用接口方法 demo
 
 # 路径 alias 配置
 

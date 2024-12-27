@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
-import { useDidHide, useDidShow, useLaunch } from '@tarojs/taro';
+import Taro, { useDidHide, useDidShow, useLaunch } from '@tarojs/taro';
 import models from '@/models';
+
 import dva from './dva';
 import './app.scss';
 
@@ -20,7 +21,7 @@ const App = (props) => {
         console.log('show');
     });
     useLaunch(() => {
-        console.log('launch');
+        Taro.setStorageSync('userInfo', { name: '测试名字', token: '123' });
     });
     return <Provider store={store}>{props.children}</Provider>;
 };

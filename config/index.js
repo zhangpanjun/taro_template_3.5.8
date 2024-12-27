@@ -24,6 +24,7 @@ outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: ['@tarojs/plugin-html'],
     //   全局使用的变量
   defineConstants: {
+    BASE_URL: '"http://www.makinokun.cn:8001/"',
   },
   alias,
   copy: {
@@ -96,7 +97,7 @@ outputRoot: `dist/${process.env.TARO_ENV}`,
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
   }
 }
 
