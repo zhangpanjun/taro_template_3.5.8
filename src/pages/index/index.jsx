@@ -31,6 +31,11 @@ const Index = (props) => {
             url: '/subPackages/sub1/index/index?a=1&b=2',
         });
     };
+    const toSubPage2 = () => {
+        Taro.navigateTo({
+            url: '/subPackages/sub2/index/index',
+        });
+    };
     useReady(() => {
         console.log('小程序页面挂载完毕');
         Taro.createSelectorQuery()
@@ -82,6 +87,9 @@ const Index = (props) => {
             )}
             <Button className="btn" onClick={toSubPage1}>
                 跳转到sub-page1
+            </Button>
+            <Button className="btn" onClick={toSubPage2}>
+                查看虚拟列表
             </Button>
         </div>
     );
